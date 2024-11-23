@@ -38,11 +38,11 @@ namespace JoshuaMackaySTFCCodingTest
         };
 
         /// <summary>
-        /// Calculates the overall cost of an order, given in a csv string of the form 
-        /// "1 x regular + milk + sugar, 1 x decaf + sprinkles, 2 x muffins".
+        /// Calculates the overall cost of an order, given in a comma-separated string of the form 
+        /// "1 x regular + milk + sugar, 2 x decaf + cream, 5 x muffins".
         /// </summary>
-        /// <param name="order">A csv string representing the order in the format 
-        /// "1 x regular + milk + sugar, 1 x decaf + sprinkles, 2 x muffins" </param>
+        /// <param name="order">A comma-separated string representing the order in the format 
+        /// "1 x regular + milk + sugar, 2 x decaf + cream, 5 x muffins" </param>
         /// <returns> A string giving the final bill in dollars.</returns>
         public string CalculateCost(string order)
         {
@@ -87,7 +87,7 @@ namespace JoshuaMackaySTFCCodingTest
         /// <returns>A float representing the cost of the individual order.</returns>
         private float CalculateIndividualCost(string order) {
 
-            // Check the order contains an 'x' character to seperate the number of items ordere from the order contents
+            // Check the order contains an 'x' character to seperate the number of items ordered from the order contents
             if (!order.Contains('x'))
             {
                 Console.WriteLine($"Invalid format for item {order}. Item skipped.");
